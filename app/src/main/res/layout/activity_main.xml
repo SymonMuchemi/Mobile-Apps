@@ -9,16 +9,17 @@
     >
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:layout_marginBottom="20pt"
         android:text="@string/android_app"
         android:textColor="@color/black"
         android:textSize="20sp"
-         />
+        android:layout_gravity="center"
+        />
 
     <EditText
+        android:id="@+id/firstname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -26,17 +27,20 @@
         android:layout_marginBottom="20dp"
         android:autofillHints="" />
     <EditText
+        android:id="@+id/lastname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
         android:hint="@string/last_name"
         android:autofillHints="" />
+
     <Button
-        android:layout_width="match_parent"
+        android:id="@+id/btn"
+        android:layout_width="100pt"
         android:layout_height="wrap_content"
-        android:text="@string/submit"
-        android:textSize="30sp"
-        android:background="#FFF"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        />
+        android:background="@color/raspberry"
+        android:text="@string/submit"
+        android:textSize="30sp" />
 </LinearLayout>
