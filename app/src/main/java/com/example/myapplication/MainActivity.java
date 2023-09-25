@@ -1,9 +1,9 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.TextureView;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -27,13 +27,14 @@ public class MainActivity extends AppCompatActivity {
         btn = findViewById(R.id.btn);
 
         // adding a click listener
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String inputFirstName = String.valueOf(firstname.getText());
-                String inputLastName = String.valueOf(lastname.getText());
-                Toast.makeText(MainActivity.this, "Hello " + inputLastName + " " + inputLastName, Toast.LENGTH_SHORT).show();
-            }
+        btn.setOnClickListener(view -> {
+            String inputFirstName = String.valueOf(firstname.getText());
+            String inputLastName = String.valueOf(lastname.getText());
+            Toast.makeText(MainActivity.this,
+                    "Hello " + inputLastName + " " + inputLastName,
+                    Toast.LENGTH_SHORT).show();
+            Intent  intent= new Intent(getApplicationContext(), MainActivity2.class);
+            startActivity(intent);
         });
     }
 }

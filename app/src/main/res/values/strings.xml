@@ -4,4 +4,7 @@
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="submit">Submit</string>
+    <string name="textview">TextView</string>
+    <string name="hello_there">Hello There!</string>
+    <string name="todo">TODO</string>
 </resources>
