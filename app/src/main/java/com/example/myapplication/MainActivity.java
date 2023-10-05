@@ -30,10 +30,15 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(view -> {
             String inputFirstName = String.valueOf(firstname.getText());
             String inputLastName = String.valueOf(lastname.getText());
+            /*
             Toast.makeText(MainActivity.this,
                     "Hello " + inputLastName + " " + inputLastName,
                     Toast.LENGTH_SHORT).show();
-            Intent  intent= new Intent(getApplicationContext(), MainActivity2.class);
+            */
+            Intent  intent= new Intent(MainActivity.this, MainActivity2.class);
+            intent.putExtra("firstname", inputFirstName);
+            intent.putExtra("lastname", inputLastName);
+
             startActivity(intent);
         });
     }

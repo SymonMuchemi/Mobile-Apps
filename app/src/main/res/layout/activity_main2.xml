@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
-    <ImageView
-        android:id="@+id/myImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="121dp"
-        tools:layout_editor_absoluteY="138dp"
-        tools:srcCompat="@tools:sample/avatars"
-        android:contentDescription="@string/todo"
-        tools:ignore="MissingConstraints" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -23,7 +13,9 @@
         android:text="@string/hello_there"
         android:textColor="@color/raspberry"
         android:textSize="20pt"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="398dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="50dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
