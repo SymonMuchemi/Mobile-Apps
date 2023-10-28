@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+//import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     public TextView textView;
@@ -29,7 +29,19 @@ public class MainActivity extends AppCompatActivity {
         // adding a click listener
         btn.setOnClickListener(view -> {
             String inputFirstName = String.valueOf(firstname.getText());
+
+            if (inputFirstName.isEmpty()){
+                firstname.setError("Input first name");
+                firstname.requestFocus();
+                return;
+            }
             String inputLastName = String.valueOf(lastname.getText());
+
+            if (inputLastName.isEmpty()){
+                lastname.setError("Input last name");
+                lastname.requestFocus();
+                return;
+            }
             /*
             Toast.makeText(MainActivity.this,
                     "Hello " + inputLastName + " " + inputLastName,
